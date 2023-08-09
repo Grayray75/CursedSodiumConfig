@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 1,
+    "id": "cursedsodiumconfig",
+    "version": "${version}",
+    "name": "Cursed Sodium Config",
+    "description": "A cursed mod that replaces Sodium's beautiful option gui with a cursed ugly one.",
+    "authors": [
+        "Grayray75"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Grayray75/CursedSodiumConfig",
+        "sources": "https://github.com/Grayray75/CursedSodiumConfig",
+        "issues": "https://github.com/Grayray75/CursedSodiumConfig/issues"
+    },
+    "license": "LGPL-3.0-only",
+    "icon": "assets/cursedsodiumconfig/icon.png",
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "io.grayray75.mods.cursedsodiumconfig.CursedSodiumConfig"
+        ]
+    },
+    "mixins": [
+        "cursedsodiumconfig.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.14.0",
+        "minecraft": "1.20.1",
+        "sodium": "0.5.0"
+    }
+}
