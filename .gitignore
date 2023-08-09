@@ -30,4 +30,4 @@ run/
 .vs
 
 # winforms build files
-src/main/resources/WinForms
+src/main/resources/assets/cursedsodiumconfig/WinForms

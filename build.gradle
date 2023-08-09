@@ -39,7 +39,7 @@ dependencies {
 
 task copyWinFormsFiles(type: Copy) {
     from "WinForms/bin/Release/net6.0-windows"
-    into "src/main/resources/WinForms"
+    into "src/main/resources/assets/cursedsodiumconfig/WinForms"
     include "*.exe", "*.dll", "*.json"
 }
 
