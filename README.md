@@ -6,6 +6,8 @@ Yes this is an actual Minecraft mod.
 
 **NOTE:** This mod probably has a lot of bugs, so please don't actually use it.
 
+**Another NOTE:** This only works on Windows!
+
 ## 🖼️ Showcase:
 
 ![preview](./media/showcase/winforms-option-gui.png)
