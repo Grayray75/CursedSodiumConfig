@@ -1,7 +1,5 @@
 package io.grayray75.mods.cursedsodiumconfig.config;
 
-import net.minecraft.client.option.AttackIndicator;
-
 public class VideoConfig {
     // General Options
     public int RenderDistance;

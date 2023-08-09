@@ -24,35 +24,27 @@ repositories {
     }
 }
 
-//sourceSets {
-//    main {
-//        resources {
-//            srcDir "WinForms/bin/Debug/net6.0-windows"
-//			includes { "*.dll" "*.exe" }
-//        }
-//    }
-//}
-
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modRuntimeOnly "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     modImplementation "maven.modrinth:sodium:${project.sodium_version}"
+
     modRuntimeOnly "maven.modrinth:modmenu:7.2.1"
 }
 
 task copyWinFormsFiles(type: Copy) {
-	from "WinForms/bin/Release/net6.0-windows"
-	into "src/main/resources/WinForms"
-	include "*.exe", "*.dll", "*.json"
+    from "WinForms/bin/Release/net6.0-windows"
+    into "src/main/resources/WinForms"
+    include "*.exe", "*.dll", "*.json"
 }
 
 processResources {
-	dependsOn(copyWinFormsFiles)
+    dependsOn(copyWinFormsFiles)
 
     inputs.property "version", project.version
 
@@ -69,22 +61,12 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 java {
-	// generating sources doesn't work for some reason
+    // generating sources doesn't work for some reason
     //withSourcesJar()
 }
 
 jar {
     from "LICENSE.txt"
-	//from("WinForms\\bin\\Debug\\net6.0-windows\\CursedSodiumConfig.WinForms.exe") {
-	//	rename { "WinForms/CursedSodiumConfig.WinForms.exe" }
-	//}
-	//from("WinForms\\bin\\Debug\\net6.0-windows\\CursedSodiumConfig.WinForms.dll") {
-	//	rename { "WinForms/CursedSodiumConfig.WinForms.dll" }
-	//}
-
-	//from("WinForms/bin/Release/net6.0-windows") {
-	//	into "WinForms"
-	//}
 }
 
 publishing {
