@@ -220,94 +220,94 @@ public abstract class SodiumOptionsGUIMixin extends Screen {
         if (originalConfig.RenderDistance != newConfig.RenderDistance) {
             ((Option<Integer>) this.optionControls.get(TranslationKeys.RenderDistance.getKey())).setValue(newConfig.RenderDistance);
         }
-        else if (originalConfig.SimulationDistance != newConfig.SimulationDistance) {
+        if (originalConfig.SimulationDistance != newConfig.SimulationDistance) {
             ((Option<Integer>) this.optionControls.get(TranslationKeys.SimulationDistance.getKey())).setValue(newConfig.SimulationDistance);
         }
-        else if (originalConfig.Brightness != newConfig.Brightness) {
+        if (originalConfig.Brightness != newConfig.Brightness) {
             ((Option<Integer>) this.optionControls.get(TranslationKeys.Brightness.getKey())).setValue(newConfig.Brightness);
         }
-        else if (originalConfig.GuiScale != newConfig.GuiScale) {
+        if (originalConfig.GuiScale != newConfig.GuiScale) {
             ((Option<Integer>) this.optionControls.get(TranslationKeys.GuiScale.getKey())).setValue(newConfig.GuiScale);
         }
-        else if (originalConfig.Fullscreen != newConfig.Fullscreen) {
+        if (originalConfig.Fullscreen != newConfig.Fullscreen) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.Fullscreen.getKey())).setValue(newConfig.Fullscreen);
         }
-        else if (originalConfig.VSync != newConfig.VSync) {
+        if (originalConfig.VSync != newConfig.VSync) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.VSync.getKey())).setValue(newConfig.VSync);
         }
-        else if (originalConfig.MaxFramerate != newConfig.MaxFramerate) {
+        if (originalConfig.MaxFramerate != newConfig.MaxFramerate) {
             ((Option<Integer>) this.optionControls.get(TranslationKeys.MaxFramerate.getKey())).setValue(newConfig.MaxFramerate);
         }
-        else if (originalConfig.ViewBobbing != newConfig.ViewBobbing) {
+        if (originalConfig.ViewBobbing != newConfig.ViewBobbing) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.ViewBobbing.getKey())).setValue(newConfig.ViewBobbing);
         }
-        else if (originalConfig.AttackIndicator != newConfig.AttackIndicator) {
+        if (originalConfig.AttackIndicator != newConfig.AttackIndicator) {
             ((Option<AttackIndicator>) this.optionControls.get(TranslationKeys.AttackIndicator.getKey())).setValue(AttackIndicator.byId(newConfig.AttackIndicator));
         }
-        else if (originalConfig.AutosaveIndicator != newConfig.AutosaveIndicator) {
+        if (originalConfig.AutosaveIndicator != newConfig.AutosaveIndicator) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.AutosaveIndicator.getKey())).setValue(newConfig.AutosaveIndicator);
         }
         // Quality Options
-        else if (originalConfig.Graphics != newConfig.Graphics) {
+        if (originalConfig.Graphics != newConfig.Graphics) {
             ((Option<GraphicsMode>) this.optionControls.get(TranslationKeys.Graphics.getKey())).setValue(GraphicsMode.byId(newConfig.Graphics));
         }
-        else if (originalConfig.Clouds != newConfig.Clouds) {
+        if (originalConfig.Clouds != newConfig.Clouds) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.Clouds.getKey())).setValue(newConfig.Clouds);
         }
-        else if (originalConfig.Weather != newConfig.Weather) {
+        if (originalConfig.Weather != newConfig.Weather) {
             ((Option<SodiumGameOptions.GraphicsQuality>) this.optionControls.get(TranslationKeys.Weather.getKey())).setValue(GraphicsQualityConverter.fromInt(newConfig.Weather));
         }
-        else if (originalConfig.Leaves != newConfig.Leaves) {
+        if (originalConfig.Leaves != newConfig.Leaves) {
             ((Option<SodiumGameOptions.GraphicsQuality>) this.optionControls.get(TranslationKeys.Leaves.getKey())).setValue(GraphicsQualityConverter.fromInt(newConfig.Leaves));
         }
-        else if (originalConfig.Particles != newConfig.Particles) {
+        if (originalConfig.Particles != newConfig.Particles) {
             ((Option<ParticlesMode>) this.optionControls.get(TranslationKeys.Particles.getKey())).setValue(ParticlesMode.byId(newConfig.Particles));
         }
-        else if (originalConfig.SmoothLighting != newConfig.SmoothLighting) {
+        if (originalConfig.SmoothLighting != newConfig.SmoothLighting) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.SmoothLighting.getKey())).setValue(newConfig.SmoothLighting);
         }
-        else if (originalConfig.BiomeBlend != newConfig.BiomeBlend) {
+        if (originalConfig.BiomeBlend != newConfig.BiomeBlend) {
             ((Option<Integer>) this.optionControls.get(TranslationKeys.BiomeBlend.getKey())).setValue(newConfig.BiomeBlend);
         }
-        else if (originalConfig.EntityDistance != newConfig.EntityDistance) {
+        if (originalConfig.EntityDistance != newConfig.EntityDistance) {
             ((Option<Integer>) this.optionControls.get(TranslationKeys.EntityDistance.getKey())).setValue(newConfig.EntityDistance);
         }
-        else if (originalConfig.EntityShadows != newConfig.EntityShadows) {
+        if (originalConfig.EntityShadows != newConfig.EntityShadows) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.EntityShadows.getKey())).setValue(newConfig.EntityShadows);
         }
-        else if (originalConfig.Vignette != newConfig.Vignette) {
+        if (originalConfig.Vignette != newConfig.Vignette) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.Vignette.getKey())).setValue(newConfig.Vignette);
         }
-        else if (originalConfig.MipmapLevels != newConfig.MipmapLevels) {
+        if (originalConfig.MipmapLevels != newConfig.MipmapLevels) {
             ((Option<Integer>) this.optionControls.get(TranslationKeys.MipmapLevels.getKey())).setValue(newConfig.MipmapLevels);
         }
         // Performance Options
-        else if (originalConfig.ChunkUpdateThreads != newConfig.ChunkUpdateThreads) {
+        if (originalConfig.ChunkUpdateThreads != newConfig.ChunkUpdateThreads) {
             ((Option<Integer>) this.optionControls.get(TranslationKeys.ChunkUpdateThreads.getKey())).setValue(newConfig.ChunkUpdateThreads);
         }
-        else if (originalConfig.AlwaysDeferChunkUpdates != newConfig.AlwaysDeferChunkUpdates) {
+        if (originalConfig.AlwaysDeferChunkUpdates != newConfig.AlwaysDeferChunkUpdates) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.AlwaysDeferChunkUpdates.getKey())).setValue(newConfig.AlwaysDeferChunkUpdates);
         }
-        else if (originalConfig.UseBlockFaceCulling != newConfig.UseBlockFaceCulling) {
+        if (originalConfig.UseBlockFaceCulling != newConfig.UseBlockFaceCulling) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.UseBlockFaceCulling.getKey())).setValue(newConfig.UseBlockFaceCulling);
         }
-        else if (originalConfig.UseFogOccusion != newConfig.UseFogOccusion) {
+        if (originalConfig.UseFogOccusion != newConfig.UseFogOccusion) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.UseFogOccusion.getKey())).setValue(newConfig.UseFogOccusion);
         }
-        else if (originalConfig.UseEntityCulling != newConfig.UseEntityCulling) {
+        if (originalConfig.UseEntityCulling != newConfig.UseEntityCulling) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.UseEntityCulling.getKey())).setValue(newConfig.UseEntityCulling);
         }
-        else if (originalConfig.AnimateOnlyVisibleTextures != newConfig.AnimateOnlyVisibleTextures) {
+        if (originalConfig.AnimateOnlyVisibleTextures != newConfig.AnimateOnlyVisibleTextures) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.AnimateOnlyVisibleTextures.getKey())).setValue(newConfig.AnimateOnlyVisibleTextures);
         }
-        else if (originalConfig.UseNoErrorContext != newConfig.UseNoErrorContext) {
+        if (originalConfig.UseNoErrorContext != newConfig.UseNoErrorContext) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.UseNoErrorContext.getKey())).setValue(newConfig.UseNoErrorContext);
         }
         // Advanced Options
-        else if (originalConfig.UsePersistentMapping != newConfig.UsePersistentMapping) {
+        if (originalConfig.UsePersistentMapping != newConfig.UsePersistentMapping) {
             ((Option<Boolean>) this.optionControls.get(TranslationKeys.UsePersistentMapping.getKey())).setValue(newConfig.UsePersistentMapping);
         }
-        else if (originalConfig.CpuRenderAhendLimit != newConfig.CpuRenderAhendLimit) {
+        if (originalConfig.CpuRenderAhendLimit != newConfig.CpuRenderAhendLimit) {
             ((Option<Integer>) this.optionControls.get(TranslationKeys.CpuRenderAhendLimit.getKey())).setValue(newConfig.CpuRenderAhendLimit);
         }
 
