@@ -37,7 +37,14 @@ dependencies {
     modRuntimeOnly "maven.modrinth:modmenu:7.2.1"
 }
 
+task buildWinForms(type: Exec) {
+    workingDir "WinForms/"
+    commandLine "cmd", "/c", "dotnet build --configuration Release"
+}
+
 task copyWinFormsFiles(type: Copy) {
+    dependsOn(buildWinForms)
+
     from "WinForms/bin/Release/net6.0-windows"
     into "src/main/resources/assets/cursedsodiumconfig/WinForms"
     include "*.exe", "*.dll", "*.json"
