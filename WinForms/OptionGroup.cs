@@ -35,11 +35,9 @@ namespace CursedSodiumConfig.WinForms
             numericUpDown.Name = $"nud{dataMember}";
             numericUpDown.Size = new Size(121, 23);
             numericUpDown.Location = new Point(190, 3 + 29 * _optionCount);
-            numericUpDown.TabStop = false;
             numericUpDown.Minimum = new decimal(minValue);
             numericUpDown.Maximum = new decimal(maxValue);
             numericUpDown.Increment = new decimal(steps);
-            //numericUpDown.DataBindings.Add("Value", dataSource, dataMember);
 
             numericUpDown.Value = new decimal((int)dataSource.GetType().GetProperty(dataMember).GetValue(dataSource));
             numericUpDown.ValueChanged += (s, e) =>
@@ -64,9 +62,7 @@ namespace CursedSodiumConfig.WinForms
             checkBox.Name = $"chx{displayName}";
             checkBox.AutoSize = true;
             checkBox.Location = new Point(191, 8 + 29 * _optionCount);
-            checkBox.TabStop = false;
             checkBox.UseVisualStyleBackColor = true;
-            //checkBox.DataBindings.Add("Checked", dataSource, dataMember);
 
             checkBox.Checked = (bool)dataSource.GetType().GetProperty(dataMember).GetValue(dataSource);
             checkBox.CheckedChanged += (s, e) =>
@@ -91,13 +87,9 @@ namespace CursedSodiumConfig.WinForms
             comboBox.Name = $"cbx{displayName}";
             comboBox.Size = new Size(121, 23);
             comboBox.Location = new Point(190, 3 + 29 * _optionCount);
-            comboBox.TabStop = false;
             comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox.FormattingEnabled = true;
             comboBox.DataSource = Enum.GetValues(enumType);
-
-            // For some reason this is causing issues...
-            //comboBox.DataBindings.Add("SelectedItem", dataSource, dataMember);
 
             comboBox.SelectedIndexChanged += (s, e) =>
             {
@@ -115,9 +107,9 @@ namespace CursedSodiumConfig.WinForms
             _optionCount++;
         }
 
-        public Panel GetFormsControl()
+        public Panel GetControl()
         {
-            _panel.Size = new Size(320, _optionCount * 30);
+            _panel.Size = new Size(320, _optionCount * 29 + 2);
             return _panel;
         }
     }

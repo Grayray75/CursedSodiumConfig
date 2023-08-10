@@ -32,6 +32,7 @@ namespace CursedSodiumConfig.WinForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             tabSettings = new TabControl();
             tabGeneral = new TabPage();
             tabQuality = new TabPage();
@@ -42,8 +43,8 @@ namespace CursedSodiumConfig.WinForms
             btnApply = new Button();
             btnUndo = new Button();
             pnlCoffee = new Panel();
-            btnCoffee = new Button();
             lblCoffee = new RgbLabel();
+            btnCoffee = new Button();
             tabSettings.SuspendLayout();
             pnlButtons.SuspendLayout();
             pnlCoffee.SuspendLayout();
@@ -114,7 +115,7 @@ namespace CursedSodiumConfig.WinForms
             // 
             // btnDone
             // 
-            btnDone.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDone.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnDone.Location = new Point(215, 3);
             btnDone.Name = "btnDone";
             btnDone.Size = new Size(100, 30);
@@ -125,7 +126,7 @@ namespace CursedSodiumConfig.WinForms
             // 
             // btnApply
             // 
-            btnApply.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnApply.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnApply.Location = new Point(109, 3);
             btnApply.Name = "btnApply";
             btnApply.Size = new Size(100, 30);
@@ -136,7 +137,7 @@ namespace CursedSodiumConfig.WinForms
             // 
             // btnUndo
             // 
-            btnUndo.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnUndo.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnUndo.Location = new Point(3, 3);
             btnUndo.Name = "btnUndo";
             btnUndo.Size = new Size(100, 30);
@@ -151,34 +152,36 @@ namespace CursedSodiumConfig.WinForms
             pnlCoffee.BackColor = SystemColors.ControlLight;
             pnlCoffee.Controls.Add(lblCoffee);
             pnlCoffee.Controls.Add(btnCoffee);
-            pnlCoffee.Location = new Point(544, 12);
+            pnlCoffee.Location = new Point(549, 12);
             pnlCoffee.Name = "pnlCoffee";
-            pnlCoffee.Size = new Size(189, 35);
+            pnlCoffee.Size = new Size(184, 35);
             pnlCoffee.TabIndex = 2;
             pnlCoffee.Click += Coffee_Click;
             // 
+            // lblCoffee
+            // 
+            lblCoffee.AutoSize = true;
+            lblCoffee.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCoffee.ForeColor = Color.FromArgb(70, 185, 0);
+            lblCoffee.Location = new Point(3, 6);
+            lblCoffee.Name = "lblCoffee";
+            lblCoffee.Size = new Size(133, 23);
+            lblCoffee.TabIndex = 2;
+            lblCoffee.Text = "Buy us a coffee!";
+            lblCoffee.Click += Coffee_Click;
+            // 
             // btnCoffee
             // 
+            btnCoffee.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnCoffee.FlatStyle = FlatStyle.Flat;
             btnCoffee.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCoffee.Location = new Point(157, 5);
+            btnCoffee.Location = new Point(152, 5);
             btnCoffee.Name = "btnCoffee";
             btnCoffee.Size = new Size(25, 25);
             btnCoffee.TabIndex = 1;
             btnCoffee.Text = "X";
             btnCoffee.UseVisualStyleBackColor = true;
             btnCoffee.Click += Coffee_Click;
-            // 
-            // lblCoffee
-            // 
-            lblCoffee.AutoSize = true;
-            lblCoffee.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCoffee.ForeColor = Color.FromArgb(120, 135, 0);
-            lblCoffee.Location = new Point(3, 4);
-            lblCoffee.Name = "lblCoffee";
-            lblCoffee.Size = new Size(148, 25);
-            lblCoffee.TabIndex = 2;
-            lblCoffee.Text = "Buy us a coffee!";
             // 
             // frmMain
             // 
@@ -188,6 +191,7 @@ namespace CursedSodiumConfig.WinForms
             Controls.Add(pnlCoffee);
             Controls.Add(pnlButtons);
             Controls.Add(tabSettings);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sodium Video Options";
