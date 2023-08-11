@@ -23,4 +23,4 @@ jobs:
           cache: "gradle"
 
       - name: Build with Gradle
-        run: ./gradlew.bat build
+        run: ./gradlew build --no-daemon
