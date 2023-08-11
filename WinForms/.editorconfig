@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# Disable annoying null warnings
+dotnet_diagnostic.CS8600.severity = silent
+dotnet_diagnostic.CS8602.severity = silent
+dotnet_diagnostic.CS8605.severity = silent
+dotnet_diagnostic.CS8618.severity = silent
