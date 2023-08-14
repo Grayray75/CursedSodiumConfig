@@ -8,17 +8,18 @@ Yes this is an actual Minecraft mod.
 
 **Another NOTE:** This only works on Windows!
 
-## 🖼️ Showcase:
+## 🖼️ Showcase
 
 ![preview](./media/showcase/winforms-option-gui.png)
 
-## 📥 Downloads:
+## 📥 Downloads
 
 You can download this mod from:
 * [GitHub Releases](https://github.com/Grayray75/CursedSodiumConfig/releases)
 
-## 🎲 Supported versions:
+## 🎲 Supported versions
 
 | Sodium Version | Latest Mod Version |
 | -------------- | ------------------ |
-| 0.5.0          | 0.1.0              |
+| 0.5.1          | 0.1.2              |
+| 0.5.0          | 0.1.2              |
