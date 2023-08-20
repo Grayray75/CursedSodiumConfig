@@ -21,5 +21,4 @@ You can download this mod from:
 
 | Sodium Version | Latest Mod Version |
 | -------------- | ------------------ |
-| 0.5.1          | 0.1.2              |
-| 0.5.0          | 0.1.2              |
+| 0.5.x          | 0.1.3              |
